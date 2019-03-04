@@ -1,3 +1,18 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<section>
+  <h1>Welcome to NoWhere!!!</h1>
+  <section class="nav-bar">
+    {{#if currentUser}}
+    <div>
+      <p>{{currentUser.username}}</p>
+      <form action="/auth/logout" method="POST">
+        <button type="submit">Logout</button>
+      </form>
+    </div>
+    {{else}}
+      <a href="/auth/signup">Sign Up</a>
+      <a href="/auth/login">Login</a>
+    {{/if}}
+  </section>
+</section>
+
 

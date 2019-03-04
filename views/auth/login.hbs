@@ -1,0 +1,25 @@
+<h1>Login it now man!</h1>
+
+<a href="/">Go Back Home</a>
+
+<form action="/auth/login" method="POST">
+
+  <div class="field">
+    <label for="">Username :</label>
+    <input type="text" name="username" id="">
+  </div>
+  <div class="field">
+    <label for="">Pasword :</label>
+    <input type="password" name="password" id="">
+  </div>
+  <div class="field">
+    <button type="submit">Login</button>
+  </div>
+
+</form>
+
+{{#if messages.length}}
+<ul class="validation">
+  {{#each messages}}<li>{{this}}</li>{{/each}}
+</ul>
+{{/if}}
